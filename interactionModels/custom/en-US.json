@@ -1,0 +1,267 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "tidebreak",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": [
+            "nevermind",
+            "cancel"
+          ]
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "help"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "MoveIntent",
+          "slots": [
+            {
+              "name": "direction",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "select {direction}",
+            "run {direction}",
+            "fly {direction}",
+            "walk {direction}",
+            "go {direction}",
+            "move {direction}"
+          ]
+        },
+        {
+          "name": "AMAZON.MoreIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateSettingsIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NextIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PageUpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PageDownIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PreviousIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollRightIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollDownIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollLeftIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollUpIntent",
+          "samples": []
+        },
+        {
+          "name": "CharacterUpdateIntent",
+          "slots": [
+            {
+              "name": "numerical_rating",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{numerical_rating}"
+              ]
+            }
+          ],
+          "samples": [
+            "test of honesty",
+            "test of honesty {numerical_rating}"
+          ]
+        },
+        {
+          "name": "CheckInventoryIntent",
+          "slots": [],
+          "samples": [
+            "what do i have",
+            "what am i carrying",
+            "inventory"
+          ]
+        },
+        {
+          "name": "GetIntent",
+          "slots": [
+            {
+              "name": "item",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "get {item}"
+          ]
+        },
+        {
+          "name": "DropIntent",
+          "slots": [
+            {
+              "name": "item",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "drop {item}"
+          ]
+        },
+        {
+          "name": "ListIntent",
+          "slots": [],
+          "samples": [
+            "list"
+          ]
+        },
+        {
+          "name": "BuyIntent",
+          "slots": [
+            {
+              "name": "item",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "buy {item}"
+          ]
+        },
+        {
+          "name": "SellIntent",
+          "slots": [
+            {
+              "name": "item",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "sell {item}"
+          ]
+        },
+        {
+          "name": "DonIntent",
+          "slots": [
+            {
+              "name": "item",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "put on {item}",
+            "don {item}",
+            "hold {item}",
+            "wear {item}"
+          ]
+        },
+        {
+          "name": "LookIntent",
+          "slots": [
+            {
+              "name": "object",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "look at {object}",
+            "look around",
+            "look"
+          ]
+        },
+        {
+          "name": "AttackIntent",
+          "slots": [
+            {
+              "name": "target",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "kill {target}",
+            "fight {target}",
+            "attack {target}"
+          ]
+        },
+        {
+          "name": "DoffIntent",
+          "slots": [
+            {
+              "name": "item",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "remove {item}",
+            "take off {item}",
+            "unwear {item}",
+            "doff {item}"
+          ]
+        },
+        {
+          "name": "GoInCharacter",
+          "slots": [],
+          "samples": [
+            "go in character"
+          ]
+        }
+      ],
+      "types": []
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "CharacterUpdateIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "numerical_rating",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.40527339038.1410494363070"
+              }
+            }
+          ],
+          "delegationStrategy": "SKILL_RESPONSE"
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.40527339038.1410494363070",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Say a number between one and ten."
+          }
+        ]
+      }
+    ]
+  },
+  "version": "34"
+}

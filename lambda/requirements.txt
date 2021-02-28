@@ -1,0 +1,7 @@
+aiohttp
+ask-sdk
+ask-sdk-core
+ask-sdk-jinja-renderer
+ask-sdk-model
+ask-sdk-runtime
+ask-sdk-s3-persistence-adapter

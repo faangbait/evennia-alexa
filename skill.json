@@ -1,0 +1,95 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "Tidebreak is a living novel; you can be anyone or do anything in this open-world audiobook. You control the action!",
+          "examplePhrases": [
+            "Alexa, open Tidebreak",
+            "Alexa, open Tidebreak and move into the cave"
+          ],
+          "keywords": [],
+          "name": "Tidebreak",
+          "description": "The first \"living novel\" ever invented, Tidebreak brings the classical \u0027Choose Your Own Adventure\u0027 model into a modern era.\n\nIt\u0027s voice activated and read to you, like an audiobook, but that\u0027s hardly worth calling an \u0027invention.\u0027\n\nWhat makes Tidebreak special is how you read it. Tidebreak lets you choose your own adventure at any step of the journey and explore chapters at your total convenience, as if you were walking through them. Stop into shops and meet shopkeepers. Have conversations with characters. You make the decision of whether to fight, negotiate, or flee from your sworn enemy -- no matter what your decision, Tidebreak goes on like any living, breathing city, and you live with the consequences. In some ways, it\u0027s the answer to \u0027what happens when you build a massively multiplayer online book.\u0027 Whatever it is, it\u0027s fun to experience, and we look forward to making you a citizen.",
+          "smallIconUri": "file://assets/images/en-US_smallIconUri.png",
+          "largeIconUri": "file://assets/images/en-US_largeIconUri.png"
+        }
+      },
+      "automaticDistribution": {
+        "isActive": false
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "No requirements to test.",
+      "category": "CHOOSE_YOUR_OWN_STORY",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:us-east-1:534714009395:function:59314ad7-6f29-4d40-b43b-ba62f819e2eb:Release_0"
+        },
+        "interfaces": [
+          {
+            "supportedViewports": [
+              {
+                "minHeight": 480,
+                "mode": "HUB",
+                "shape": "ROUND",
+                "maxHeight": 480,
+                "minWidth": 480,
+                "maxWidth": 480
+              },
+              {
+                "minHeight": 600,
+                "mode": "HUB",
+                "shape": "RECTANGLE",
+                "maxHeight": 600,
+                "minWidth": 1024,
+                "maxWidth": 1024
+              },
+              {
+                "minHeight": 800,
+                "mode": "HUB",
+                "shape": "RECTANGLE",
+                "maxHeight": 800,
+                "minWidth": 1280,
+                "maxWidth": 1280
+              },
+              {
+                "minHeight": 540,
+                "mode": "TV",
+                "shape": "RECTANGLE",
+                "maxHeight": 540,
+                "minWidth": 960,
+                "maxWidth": 960
+              },
+              {
+                "minHeight": 480,
+                "mode": "HUB",
+                "shape": "RECTANGLE",
+                "maxHeight": 480,
+                "minWidth": 960,
+                "maxWidth": 960
+              }
+            ],
+            "type": "ALEXA_PRESENTATION_APL"
+          },
+          {
+            "minimumTemplateVersion": "1.0",
+            "type": "RENDER_TEMPLATE"
+          }
+        ]
+      }
+    },
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "locales": {
+        "en-US": {}
+      },
+      "containsAds": false,
+      "isExportCompliant": true,
+      "isChildDirected": false,
+      "usesPersonalInfo": false
+    }
+  }
+}
