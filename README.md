@@ -26,13 +26,6 @@ Example objects.py
         super().msg(**clean_kwargs)
         delay(1, self.disconnect_alexa)
 
-    def get_display_name(self, looker):
-        return self.key
-
-    def return_appearance(self, looker, **kwargs):
-        appearance = {'flags': [], 'name': self.get_display_name(looker), 'desc': self.db.desc or ""}
-        return appearance
-
     @property
     def is_alexa_session(self):
         return False
