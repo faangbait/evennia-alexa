@@ -1,6 +1,13 @@
 # evennia-alexa
 ![img](https://img.shields.io/badge/build-alpha-yellow) Feel free to steal this code, but don't trust it.
 
+This makes the server interfaceable with an Alexa device. It functions, but man, Alexa is just total garbo at understanding commands. To be honest, integrating this makes playing for regular users kind of lame, as random people with no username start bouncing in and out of the server constantly. It's really an all-or-nothing thing.
+
+Things to note:
+- Look at the cool use of kwargs to send giant packets of useful data to a protocol! Inspiration for the first remarkably good MXP integration, perhaps?
+- Different types of interactions need different UI displays. Traversing rooms and checking out your equipment are completely different interactions. The card_type kwarg ties everything together on both the server end (what gets sent?) and the Alexa end (what should I show the user?)
+- You kinda have to rewrite your commands to use this, particularly the traverse commands. The Alexa integration sends 'move east, move west' etc. It's up to you to make sure your exits are aliased, and some fuzzy matching on the exit aliases doesn't hurt either, since natural speech remains annoyingly imprecise.
+
 ```
 Example objects.py
 
