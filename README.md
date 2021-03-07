@@ -191,3 +191,24 @@ class AlexaCharacter(Character):
                 self.account.disconnect_session_from_account(session)
 
 ```
+
+```
+inlinefuncs.py support for changing TTS voice
+
+def ssml(text, tag, *args, **kwargs):
+    """
+    Usage:
+        $ssml(I want to tell you a secret, voice name="Kendra")
+        $ssml(I am not a real human, amazon:emotion name="disappointed" intensity="medium")
+        $ssml(You won't say anything, will you?, amazon:effect name="whispered")
+    """
+    session = kwargs.get("session")
+    if not session.protocol_flags.get("CLIENTNAME", "") in ["ALEXA"]:
+        return text
+    if not text or not tag:
+        return text
+    tag = tag.strip()
+    tag_code = tag.split(" ", 1)
+    return "<{before}>{text}</{after}>".format(before=tag, text=text, after=tag_code[0])
+    
+```
